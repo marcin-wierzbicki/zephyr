@@ -106,8 +106,6 @@
 				<ADC1_SE15_PTB1>,
 				<ADC1_SE7_PTB12>,
 				<ADC1_SE8_PTB13>,
-				<ADC1_SE4_PTC6>,
-				<ADC1_SE5_PTC7>,
 				<ADC1_SE2_PTD2>,
 				<ADC1_SE3_PTD3>,
 				<ADC1_SE6_PTD4>,
