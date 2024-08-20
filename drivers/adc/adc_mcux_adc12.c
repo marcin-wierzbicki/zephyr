@@ -21,6 +21,8 @@ LOG_MODULE_REGISTER(adc_mcux_adc12);
 #define ADC_CONTEXT_USES_KERNEL_TIMER
 #include "adc_context.h"
 
+#define ADC_S32K1_REF_INTERNAL_MW	5000
+
 struct mcux_adc12_config {
 	ADC_Type *base;
 	adc12_clock_source_t clock_src;
@@ -261,6 +263,9 @@ static const struct adc_driver_api mcux_adc12_driver_api = {
 	.read = mcux_adc12_read,
 #ifdef CONFIG_ADC_ASYNC
 	.read_async = mcux_adc12_read_async,
+#endif
+#if defined(CONFIG_SOC_SERIES_S32K1)
+	.ref_internal = ADC_S32K1_REF_INTERNAL_MW,
 #endif
 };
 
